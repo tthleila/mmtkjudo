@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mátészalkai MTK Judo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color:rgb(0, 0, 0)
+        }
+
+        header {
+            background: #0a0a2a;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header h1 {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+        nav {
+            padding-right: 20px;
+        }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+                nav ul li {
+                    margin: 0 15px;
+                }
+
+                    nav ul li a {
+                        color: white;
+                        text-decoration: none;
+                    }
+        .content-section {
+            display: none;
+        }
+
+            .content-section.active {
+                display: block;
+            }
+
+        .hero {
+            position: relative;
+            background: url('https://wallpapers.com/images/hd/judo-respect-act-kwghxq9k7yp4n3fo.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 200px 20px;
+        }
+
+            .hero .overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 10%;
+            }
+
+        .welcome {
+            background: #0a0a2a;
+            color: white;
+            padding: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .feature {
+            background: #ffffff;
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+            .feature h3 {
+                background: #1a1a5e;
+                color: white;
+                padding: 10px;
+                margin: -20px -20px 10px -20px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                text-align: center;
+            }
+
+        button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius:20px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("join-button").addEventListener("click", function () {
+                alert("Köszönjük az érdeklődést! Hamarosan felvesszük veled a kapcsolatot.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mátészalkai MTK Judo</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('mi-a-judo')">Mi a judo?</a></li>
+                <li><a href="#" onclick="showSection('rolunk')">Rólunk</a></li>
+                <li><a href="#" onclick="showSection('buszkesegeink')">Büszkeségeink</a></li>
+                <li><a href="#" onclick="showSection('kapcsolat')">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mi-a-judo" class="content-section">
+        <h2>Mi a judo?</h2>
+        <p>A judo egy japán harcművészet...</p>
+    </section>
+
+    <section id="rolunk" class="content-section">
+        <h2>Rólunk</h2>
+        <p>Klubunk célja, hogy...</p>
+    </section>
+
+    <section id="buszkesegeink" class="content-section">
+        <h2>Büszkeségeink</h2>
+        <p>Büszkék vagyunk versenyzőinkre...</p>
+    </section>
+
+    <section id="kapcsolat" class="content-section">
+        <h2>Kapcsolat</h2>
+        <p>Lépj kapcsolatba velünk...</p>
+    </section>
+
+    <section class="hero">
+        <div class="overlay">
+            <span>Aki harcol, veszíthet.</span>
+            <span>Aki nem harcol, már vesztett is.</span>
+        </div>
+    </section>
+
+    <section class="welcome">
+        <h2>ÜDVÖZLÜNK A MÁTÉSZALKAI JUDO KLUBNÁL</h2>
+        <p>Várunk minden judo iránt érdeklődőt a kezdőtől a haladó szintig.</p>
+        <button id="join-button">Csatlakozz hozzánk!</button>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h3>Önvédelem</h3>
+            <p>A judo hatékonyan tanítja meg az ellenfél irányítását és semlegesítését. Segít elkerülni a sérüléseket a megfelelő eséstechnikák alkalmazásával. A támadó erejét saját előnyünkre fordítja.</p>
+        </div>
+        <div class="feature">
+            <h3>Önfegyelem</h3>
+            <p>A judo tiszteletet tanít a szabályok, ellenfelek és mesterek iránt. Fejleszti a mentális erőt és a helyes döntéshozatalt vészhelyzetekben. Segít az impulzusok kontrollálásában és a helyes reakciók alkalmazásában.</p>
+        </div>
+        <div class="feature">
+            <h3>Erőnlét</h3>
+            <p>A judo fejleszti az izomzatot és állóképességet. Javítja a gyorsaságot és koordinációt. Erősíti a test különböző izomcsoportjait a dobások és földharc során.</p>
+        </div>
+    </section>
+</body>
+</html>
