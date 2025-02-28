@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color:rgb(0, 0, 0)
+            background-color: black;
         }
 
         header {
@@ -20,11 +20,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
             header h1 {
                 margin: 0;
                 padding-left: 20px;
+                font-size: 1.5em;
             }
 
         nav {
@@ -36,29 +38,27 @@
                 padding: 0;
                 margin: 0;
                 display: flex;
+                flex-wrap: wrap;
             }
 
                 nav ul li {
-                    margin: 0 15px;
+                    margin: 0 10px;
                 }
 
                     nav ul li a {
                         color: white;
                         text-decoration: none;
                     }
-        .content-section {
-            display: none;
+        .welcome {
+            background: #0a0a2a;
+            color: white;
+            padding: 20px;
         }
-
-            .content-section.active {
-                display: block;
-            }
-
         .hero {
             position: relative;
             background: url('https://wallpapers.com/images/hd/judo-respect-act-kwghxq9k7yp4n3fo.jpg') no-repeat center center/cover;
             color: white;
-            padding: 200px 20px;
+            padding: 150px 20px;
         }
 
             .hero .overlay {
@@ -66,32 +66,29 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 100%;
-                font-size: 24px;
+                width: 90%;
+                font-size: 20px;
                 font-weight: bold;
                 color: white;
                 display: flex;
                 justify-content: space-between;
-                padding: 0 10%;
+                flex-wrap: wrap;
+                text-align: center;
             }
-
-        .welcome {
-            background: #0a0a2a;
-            color: white;
-            padding: 20px;
-        }
 
         .features {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 20px;
+            flex-wrap: wrap;
         }
 
         .feature {
-            background: #ffffff;
+            background: white;
             padding: 20px;
-            width: 30%;
+            width: 100%;
+            max-width: 300px;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             text-align: left;
@@ -113,16 +110,39 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
-            border-radius:20px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+                nav ul li {
+                    margin: 5px 0;
+                }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+                .hero .overlay {
+                    flex-direction: column;
+                    font-size: 18px;
+                }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("join-button").addEventListener("click", function () {
-                alert("Köszönjük az érdeklődést! Hamarosan felvesszük veled a kapcsolatot.");
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -137,38 +157,18 @@
         </nav>
     </header>
 
-    <section id="mi-a-judo" class="content-section">
-        <h2>Mi a judo?</h2>
-        <p>A judo egy japán harcművészet...</p>
-    </section>
-
-    <section id="rolunk" class="content-section">
-        <h2>Rólunk</h2>
-        <p>Klubunk célja, hogy...</p>
-    </section>
-
-    <section id="buszkesegeink" class="content-section">
-        <h2>Büszkeségeink</h2>
-        <p>Büszkék vagyunk versenyzőinkre...</p>
-    </section>
-
-    <section id="kapcsolat" class="content-section">
-        <h2>Kapcsolat</h2>
-        <p>Lépj kapcsolatba velünk...</p>
-    </section>
-
     <section class="hero">
         <div class="overlay">
             <span>Aki harcol, veszíthet.</span>
             <span>Aki nem harcol, már vesztett is.</span>
         </div>
     </section>
-
     <section class="welcome">
         <h2>ÜDVÖZLÜNK A MÁTÉSZALKAI JUDO KLUBNÁL</h2>
         <p>Várunk minden judo iránt érdeklődőt a kezdőtől a haladó szintig.</p>
         <button id="join-button">Csatlakozz hozzánk!</button>
     </section>
+    <section
     <section class="features">
         <div class="feature">
             <h3>Önvédelem</h3>
